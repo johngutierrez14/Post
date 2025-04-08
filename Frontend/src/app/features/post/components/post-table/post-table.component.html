@@ -1,6 +1,8 @@
 <div class="container">
-    <h4>Listado de Post</h4>
-
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Listado de Post</h4>
+        <button type="button" class="btn btn-primary" routerLink="/add">Agregar Post</button>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -19,7 +21,7 @@
                 <td>{{ post.author }}</td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                        <button routerLink="/edit/{{post.id}}" type="button" class="btn btn-primary btn-sm">Editar</button>
                         <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
                     </div>
                 </td>
